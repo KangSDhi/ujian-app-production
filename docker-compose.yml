@@ -1,0 +1,15 @@
+name: ujian-production
+
+services:
+  
+  backend:
+    image: kangstek/backend-ujian-spring-boot-java:beta-0.0.1
+    container_name: backend-ujian-spring-boot-prod
+    ports:
+      - 8080:8080
+    networks:
+      - ujian-production-net
+
+networks:
+  ujian-production-net:
+    driver: bridge
