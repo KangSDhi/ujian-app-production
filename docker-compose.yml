@@ -7,17 +7,9 @@ services:
     container_name: backend-ujian-spring-boot-prod
     ports:
       - 8080:8080
-    networks:
-      - ujian-production-net
   
   frontend:
     image: kangstek/frontend-ujian-vite-vue:beta-0.0.1
-    container_name: frontend-ujian-vite-vue
+    container_name: frontend-ujian-vite-vue-prod
     ports:
       - 3000:3000
-    networks:
-      - ujian-production-net
-
-networks:
-  ujian-production-net:
-    driver: bridge
